@@ -2,5 +2,7 @@
 
 Just embed this in your website:
 ```html
+<!-- Auto Add Schema Markup by Jake Labate :) -->
+<!-- https://www.jakelabate.com/code/auto-add-schema-markup -->
 <script src="https://cdn.jakelabate.com/auto-add-schema-markup/script.js"></script>
 ```
