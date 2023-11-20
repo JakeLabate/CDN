@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		const linkType = determineLinkType(linkElement.href, currentDomain);
 
 		// determine link size
-		const scriptTag = document.getElementById('custom-link-18px');
+		const scriptTag = document.getElementById('custom-link-size');
 		let cursorSize = scriptTag.getAttribute('data-cursor-size') || '22';
 		if (!cursorSize.endsWith('px')) cursorSize += 'px';
 
