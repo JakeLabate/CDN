@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		if (!cursorSize.endsWith('px')) cursorSize += 'px';
 
 		// create cursor
-		linkElement.style.cursor = `url('https://cdn.jakelabate.com/custom-link-cursors/cursors/${cursorSize}/${linkType}-${bgCategory}.svg'), auto`;
+		linkElement.style.cursor = `url('https://cdn.jakelabate.com/custom-link-cursors/cursors/${cursorSize}/${linkType}-${linkColor}.svg'), auto`;
 	});
 });
 
