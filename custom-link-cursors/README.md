@@ -10,7 +10,7 @@ See demo [here](https://www.jakelabate.com/code/custom-link-cursors).
 
 
 ## Usage
-Just embed this script tag on your website. Thats it!
+Just embed this script tag on your website. Thats it! Note you can select the pixel size of the cursors you want to use. There are SVG files for 16px to 32px - anothing smaller or larger will not return a cursor.
 
 ```html
 <!-- Custom Link Cursors by Jake Labate :) -->
