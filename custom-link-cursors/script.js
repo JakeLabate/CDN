@@ -14,7 +14,26 @@ document.addEventListener("DOMContentLoaded", function () {
 	const links = document.querySelectorAll('a');
 	links.forEach(linkElement => {
 
-		// determine background color of link -> then desired color of link cursor
+		const href = linkElement.href;
+		const currentUrl = window.location.href.split('?')[0];
+
+		// determine link type
+		let linkType;
+		if (href.includes('facebook.com')) { linkType = 'facebook'; } else
+		if (href.includes('twitter.com') || href.includes('x.com')) { linkType = 'x'; } else
+		if (href.includes('instagram.com')) { linkType = 'instagram'; } else
+		if (href.includes('linkedin.com')) { linkType = 'linkedin'; } else
+		if (href.includes('youtube.com')) { linkType = 'youtube'; } else
+		if (href.includes('tiktok.com')) { linkType = 'tiktok'; } else
+		if (href.includes('mailto:')) { linkType = 'email'; } else
+		if (href.includes('tel:')) { linkType = 'phone'; } else
+		if (href.includes('sms:')) { linkType = 'sms'; } else
+		if (href.startsWith('#') || href.includes(currentUrl) || href.includes('#')) { linkType = 'section'; } else
+		if (href.includes(currentDomain)) { linkType = 'internal'; } else
+		if (isExternalLink(href, currentDomain)) { linkType = 'external'; } else
+		linkType = 'unknown';
+
+		// determine background color of link -> then set color of link cursor
 		const linkBackgroundColor = window.getComputedStyle(linkElement).backgroundColor;
 		const rgb = linkBackgroundColor.match(/\d+/g) || [255, 255, 255]; // Fallback to white if format is unexpected
 		const brightness = Math.round(((parseInt(rgb[0]) * 299) + (parseInt(rgb[1]) * 587) + (parseInt(rgb[2]) * 114)) / 1000);
@@ -25,32 +44,11 @@ document.addEventListener("DOMContentLoaded", function () {
 			case 'light': linkColor = 'dark'; break;
 		}
 
-		// determine link type
-		const linkType = determineLinkType(linkElement.href, currentDomain);
-
 		// create cursor
 		linkElement.style.cursor = `url('https://cdn.jakelabate.com/custom-link-cursors/cursors/${cursorSize}/${linkType}-${linkColor}.svg'), auto`;
 	});
+
 });
-
-function determineLinkType(href, currentDomain) {
-	const currentUrl = window.location.href.split('?')[0];
-
-	if (href.includes('facebook.com')) return 'facebook';
-	if (href.includes('twitter.com') || href.includes('x.com')) return 'x';
-	if (href.includes('instagram.com')) return 'instagram';
-	if (href.includes('linkedin.com')) return 'linkedin';
-	if (href.includes('youtube.com')) return 'youtube';
-	if (href.includes('tiktok.com')) return 'tiktok';
-	if (href.includes('mailto:')) return 'email';
-	if (href.includes('tel:')) return 'phone';
-	if (href.includes('sms:')) return 'sms';
-	if (href.startsWith('#') || href.includes(currentUrl) || href.includes('#')) return 'section';
-	if (href.includes(currentDomain)) return 'internal';
-	if (isExternalLink(href, currentDomain)) return 'external';
-
-	return 'unknown';
-}
 
 function isExternalLink(href, currentDomain) {
 	const domainRegex = /https?:\/\/(?:www\.)?[^\/]+/;
