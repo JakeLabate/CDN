@@ -25,12 +25,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 		// determine link size
 		const scriptTag = document.getElementById('custom-link-18px');
-		let cursorSize = scriptTag.getAttribute('data-cursor-size') || '22px'; // default to 22px
+		let cursorSize = scriptTag.getAttribute('data-cursor-size') || '22';
 		if (!cursorSize.endsWith('px')) cursorSize += 'px';
 
-		// set cursor
-		linkElement.style.cursor = `url('https://cdn.jakelabate.com/custom-link-cursors/cursors/${cursorSize}/${linkType}-${linkColor}.svg'), auto`;
-
+		// create cursor
+		linkElement.style.cursor = `url('https://cdn.jakelabate.com/custom-link-cursors/cursors/${cursorSize}/${linkType}-${bgCategory}.svg'), auto`;
 	});
 });
 
