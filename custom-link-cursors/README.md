@@ -10,9 +10,15 @@ See demo [here](https://www.jakelabate.com/code/custom-link-cursors).
 
 
 ## Usage
-Just embed this in your website:
+Just embed this script tag on your website. Thats it!
+
 
 ```html
-<!-- Custom Link Cursors by Jake Labate -->
-<script id="custom-link-cursors" data-cursor-size="22px" src="https://cdn.jakelabate.com/custom-link-cursors/script.js"></script>
+data-cursor-size="22"
+```
+
+
+```html
+<!-- Custom Link Cursors by Jake Labate :) -->
+<script id="custom-link-cursors" data-cursor-size="22" src="https://cdn.jakelabate.com/custom-link-cursors/script.js"></script>
 ```
