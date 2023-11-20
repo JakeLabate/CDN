@@ -5,6 +5,6 @@ Just a little collection of tools by/for me (and whoever wants to contribute to/
 ## Custom Link Cursors
 Currently on the [custom link cursors](https://github.com/JakeLabate/CDN/tree/main/custom-link-cursors) are functional:
 ```html
-<!-- Custom Link Cursors by Jake Labate :) -->
+<!-- Custom Cursors by Jake Labate :) -->
 <script id="custom-link-cursors" data-cursor-size="22px" src="https://cdn.jakelabate.com/custom-link-cursors/script.js"></script>
 ```
