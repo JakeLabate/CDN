@@ -1,23 +1,24 @@
 document.addEventListener("DOMContentLoaded", function () {
 
+	// get current domain
 	const hostname = window.location.hostname;
 	const parts = hostname.split('.');
 	const currentDomain = parts.length > 2 ? parts.slice(-2).join('.') : hostname;
 
+	// determine cursor size
 	const scriptTag = document.getElementById('custom-link-cursors');
 	let cursorSize = scriptTag.getAttribute('data-cursor-size') || '22';
 	if (!cursorSize.endsWith('px')) cursorSize += 'px';
 
+	// get links -> for each link -> computer
 	const links = document.querySelectorAll('a');
 	links.forEach(linkElement => {
 
-		// determine background color of link
+		// determine background color of link -> then desired color of link cursor
 		const linkBackgroundColor = window.getComputedStyle(linkElement).backgroundColor;
 		const rgb = linkBackgroundColor.match(/\d+/g) || [255, 255, 255]; // Fallback to white if format is unexpected
 		const brightness = Math.round(((parseInt(rgb[0]) * 299) + (parseInt(rgb[1]) * 587) + (parseInt(rgb[2]) * 114)) / 1000);
 		const bgCategory = brightness < 125 ? 'light' : 'dark';
-
-		// set link color
 		let linkColor;
 		switch(bgCategory) {
 			case 'dark': linkColor = 'light'; break;
@@ -26,8 +27,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 		// determine link type
 		const linkType = determineLinkType(linkElement.href, currentDomain);
-
-		// determine link size
 
 		// create cursor
 		linkElement.style.cursor = `url('https://cdn.jakelabate.com/custom-link-cursors/cursors/${cursorSize}/${linkType}-${linkColor}.svg'), auto`;

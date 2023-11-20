@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+
+<!-- table demo -->
+<style>
+	table {
+		width: 100%;
+		border-collapse: collapse;
+	}
+	th, td {
+		border: 1px solid black;
+		padding: 8px;
+		text-align: left;
+	}
+	th {
+		background-color: #f2f2f2;
+	}
+	td.dark {
+		background-color: #111;
+	}
+	td a.dark {
+		background-color: #111;
+		padding: 8px;
+		color: #fff;
+		width: 100%;
+	}
+	td a.light {
+		background-color: #fff;
+		padding: 8px;
+		color: #111;
+		width: 100%;
+	}
+	@media only screen and (max-width: 768px) {
+		td.m-hide, th.m-hide {
+			display: none;
+		}
+	}
+</style>
+<table>
+	<thead>
+	<tr>
+		<th>Destination</th>
+		<th>Background Color</th>
+		<th>Cursor Icon</th>
+		<th class="m-hide">Hover Demo</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<td>Facebook</td>
+		<td>Dark (light icon)</td>
+		<td class="dark"><img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/24px/facebook-light.svg"></td>
+		<td class="dark m-hide"><a class="dark" data-u="true" style="cursor: url('https://cdn.jakelabate.com/custom-link-cursors/cursors/24px/facebook-light.svg'), auto" href="https://www.facebook.com/drjordanpeterson" target="_blank">https://www.facebook.com/drjordanpeterson</a></td>
+	<tr>
+		<td>Facebook</td>
+		<td>Light (dark icon)</td>
+		<td><img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/24px/facebook-dark.svg"></td>
+		<td class="m-hide"><a class="light" data-u="true"  style="cursor: url('https://cdn.jakelabate.com/custom-link-cursors/cursors/24px/facebook-dark.svg'), auto" href="hhtps://www.facebook.com/drjordanpeterson" target="_blank">https://www.facebook.com/drjordanpeterson</a></td>
+	</tr>
+	<tr>
+		<td>Instagram</td>
+		<td>Dark (light icon)</td>
+		<td class="dark"><img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/24px/instagram-light.svg"></td>
+		<td class="dark m-hide"><a class="dark" data-u="true" style="cursor: url('https://cdn.jakelabate.com/custom-link-cursors/cursors/24px/instagram-light.svg'), auto" href="https://www.instagram.com/jake.labate" target="_blank">https://www.instagram.com/jake.labate</a></td>
+	</tr>
+	<tr>
+		<td>Instagram</td>
+		<td>Light (dark icon)</td>
+		<td><img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/24px/instagram-dark.svg"></td>
+		<td class="m-hide"><a class="light" data-u="true" style="cursor: url('https://cdn.jakelabate.com/custom-link-cursors/cursors/24px/instagram-dark.svg'), auto" href="https://www.instagram.com/jake.labate" target="_blank">https://www.instagram.com/jake.labate</a></td>
+	</tr>
+	<tr>
+		<td>X / Twitter</td>
+		<td>Dark (light icon)</td>
+		<td class="dark"><img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/24px/x-light.svg"></td>
+		<td class="dark m-hide"><a class="dark" data-u="true" style="cursor: url('https://cdn.jakelabate.com/custom-link-cursors/cursors/24px/x-light.svg'), auto" href="https://twitter.com/labate_jake" target="_blank">https://twitter.com/labate_jake</a></td>
+	</tr>
+	<tr>
+		<td>X / Twitter</td>
+		<td>Light (dark icon)</td>
+		<td><img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/24px/x-dark.svg"></td>
+		<td class="m-hide"><a class="light" data-u="true" style="cursor: url('https://cdn.jakelabate.com/custom-link-cursors/cursors/24px/x-dark.svg'), auto" href="https://twitter.com/labate_jake" target="_blank">https://twitter.com/labate_jake</a></td>
+	</tr>
+	<tr>
+		<td>LinkedIn</td>
+		<td>Dark (light icon)</td>
+		<td class="dark"><img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/24px/linkedin-light.svg"></td>
+		<td class="dark m-hide"><a class="dark" data-u="true" style="cursor: url('https://cdn.jakelabate.com/custom-link-cursors/cursors/24px/linkedin-light.svg'), auto" href="https://www.linkedin.com/in/jakelabate" target="_blank">https://www.linkedin.com/in/jakelabate</a></td>
+	</tr>
+	<tr>
+		<td>LinkedIn</td>
+		<td>Light (dark icon)</td>
+		<td><img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/24px/linkedin-dark.svg"></td>
+		<td class="m-hide"><a class="light" data-u="true" style="cursor: url('https://cdn.jakelabate.com/custom-link-cursors/cursors/24px/linkedin-dark.svg'), auto" href="https://www.linkedin.com/in/jakelabate" target="_blank">https://www.linkedin.com/in/jakelabate</a></td>
+	</tr>
+	<tr>
+		<td>TikTok</td>
+		<td>Dark (light icon)</td>
+		<td class="dark"><img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/24px/tiktok-light.svg"></td>
+		<td class="dark m-hide"><a class="dark" data-u="true" style="cursor: url('https://cdn.jakelabate.com/custom-link-cursors/cursors/24px/tiktok-light.svg'), auto" href="https://www.tiktok.com/@j.labate" target="_blank">https://www.tiktok.com/@j.labate</a></td>
+	</tr>
+	<tr>
+		<td>TikTok</td>
+		<td>Light (dark icon)</td>
+		<td><img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/24px/tiktok-dark.svg"></td>
+		<td class="m-hide"><a class="light" data-u="true" style="cursor: url('https://cdn.jakelabate.com/custom-link-cursors/cursors/24px/tiktok-dark.svg'), auto" href="https://www.tiktok.com/@j.labate" target="_blank">https://www.tiktok.com/@j.labate</a></td>
+	</tr>
+	<tr>
+		<td>YouTube</td>
+		<td>Dark (light icon)</td>
+		<td class="dark"><img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/24px/youtube-light.svg"></td>
+		<td class="dark m-hide"><a class="dark" data-u="true" style="cursor: url('https://cdn.jakelabate.com/custom-link-cursors/cursors/24px/youtube-light.svg'), auto" href="https://www.youtube.com/@jakelabate" target="_blank">https://www.youtube.com/@jakelabate</a></td>
+	</tr>
+	<tr>
+		<td>YouTube</td>
+		<td>Light (dark icon)</td>
+		<td><img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/24px/youtube-dark.svg"></td>
+		<td class="m-hide"><a class="light" data-u="true" style="cursor: url('https://cdn.jakelabate.com/custom-link-cursors/cursors/24px/youtube-dark.svg'), auto" href="https://www.youtube.com/@jakelabate" target="_blank">https://www.youtube.com/@jakelabate</a></td>
+	</tr>
+	<tr>
+		<td>Current page section</td>
+		<td>Dark (light icon)</td>
+		<td class="dark"><img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/24px/section-light.svg"></td>
+		<td class="dark m-hide"><a class="dark" data-u="true" style="cursor: url('https://cdn.jakelabate.com/custom-link-cursors/cursors/24px/section-light.svg'), auto" href="#info">#info</a></td>
+	</tr>
+	<tr>
+		<td>Current page section</td>
+		<td>Light (dark icon)</td>
+		<td><img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/24px/section-dark.svg"></td>
+		<td class="m-hide"><a class="light" data-u="true" style="cursor: url('https://cdn.jakelabate.com/custom-link-cursors/cursors/24px/section-dark.svg'), auto" href="#info">#info</a></td>
+	</tr>
+	<tr>
+		<td>Current site URL</td>
+		<td>Dark (light icon)</td>
+		<td class="dark"><img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/24px/internal-light.svg"></td>
+		<td class="dark m-hide"><a class="dark" data-u="true" style="cursor: url('https://cdn.jakelabate.com/custom-link-cursors/cursors/24px/internal-light.svg'), auto" href="https://www.jakelabate.com" target="_blank">https://www.jakelabate.com</a></td>
+	</tr>
+	<tr>
+		<td>Current site URL</td>
+		<td>Light (dark icon)</td>
+		<td><img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/24px/internal-dark.svg"></td>
+		<td class="m-hide"><a class="light" data-u="true" style="cursor: url('https://cdn.jakelabate.com/custom-link-cursors/cursors/24px/internal-dark.svg'), auto" href="https://www.jakelabate.com/" target="_blank">https://www.jakelabate.com</a></td>
+	</tr>
+	<tr>
+		<td>Different site URL</td>
+		<td>Dark (light icon)</td>
+		<td class="dark"><img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/24px/external-light.svg"></td>
+		<td class="dark m-hide"><a class="dark" data-u="true" style="cursor: url('https://cdn.jakelabate.com/custom-link-cursors/cursors/24px/external-light.svg'), auto" href="https://github.com/JakeLabate" target="_blank">https://github.com/JakeLabate</a></td>
+	</tr>
+	<tr>
+		<td>Different site URL</td>
+		<td>Light (dark icon)</td>
+		<td><img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/24px/external-dark.svg"></td>
+		<td class="m-hide"><a class="light" data-u="true" style="cursor: url('https://cdn.jakelabate.com/custom-link-cursors/cursors/24px/external-dark.svg'), auto" href="https://github.com/JakeLabate" target="_blank">https://github.com/JakeLabate</a></td>
+	</tr>
+	<tr>
+		<td>Email</td>
+		<td>Dark (light icon)</td>
+		<td class="dark"><img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/24px/email-light.svg"></td>
+		<td class="dark m-hide"><a class="dark" data-u="true" style="cursor: url('https://cdn.jakelabate.com/custom-link-cursors/cursors/24px/email-light.svg'), auto" href="mailto:jake.a.labate@gmail.com" target="_blank">jake.a.labate@gmail.com</a></td>
+	</tr>
+	<tr>
+		<td>Email</td>
+		<td>Light (dark icon)</td>
+		<td><img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/24px/email-dark.svg"></td>
+		<td class="m-hide"><a class="light" data-u="true" style="cursor: url('https://cdn.jakelabate.com/custom-link-cursors/cursors/24px/email-dark.svg'), auto" href="mailto:jake.a.labate@gmail.com" target="_blank">jake.a.labate@gmail.com</a></td>
+	</tr>
+	<tr>
+		<td>Phone (call)</td>
+		<td>Dark (light icon)</td>
+		<td class="dark"><img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/24px/phone-light.svg"></td>
+		<td class="dark m-hide"><a class="dark" data-u="true" style="cursor: url('https://cdn.jakelabate.com/custom-link-cursors/cursors/24px/phone-light.svg'), auto" href="tel:203-907-5536" target="_blank">Call 203-907-5536</a></td>
+	</tr>
+	<tr>
+		<td>Phone (call)</td>
+		<td>Light (dark icon)</td>
+		<td><img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/24px/phone-dark.svg"></td>
+		<td class="m-hide"><a class="light" data-u="true" style="cursor: url('https://cdn.jakelabate.com/custom-link-cursors/cursors/24px/phone-dark.svg'), auto" href="tel:203-907-5536" target="_blank">Call 203-907-5536</a></td>
+	</tr>
+	<tr>
+		<td>SMS (text)</td>
+		<td>Dark (light icon)</td>
+		<td class="dark"><img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/24px/sms-light.svg"></td>
+		<td class="dark m-hide"><a class="dark" data-u="true" style="cursor: url('https://cdn.jakelabate.com/custom-link-cursors/cursors/24px/sms-light.svg'), auto" href="sms:203-907-5536" target="_blank">Text 203-907-5536</a></td>
+	</tr>
+	<tr>
+		<td>SMS (text)</td>
+		<td>Light (dark icon)</td>
+		<td><img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/24px/sms-dark.svg"></td>
+		<td class="m-hide"><a class="light" data-u="true" style="cursor: url('https://cdn.jakelabate.com/custom-link-cursors/cursors/24px/sms-dark.svg'), auto" href="sms:203-907-5536" target="_blank">Text 203-907-5536</a></td>
+	</tr>
+	</tbody>
+</table>
+
+<!-- table to show different size icons -->
+<style>
+	/* for all image that have 'px' in the src, give them side padding of 8px */
+	img[src*="px"] {
+		margin: 4px;
+	}
+</style>
+<table>
+	<thead>
+		<tr>
+			<th>Pixel Sizes</th>
+			<th>Render Size Demo</th>
+		</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<td>16px</td>
+		<td class="dark columns">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/16px/facebook-light.svg">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/16px/instagram-light.svg">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/16px/x-light.svg">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/16px/linkedin-light.svg">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/16px/tiktok-light.svg">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/16px/youtube-light.svg">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/16px/section-light.svg">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/16px/internal-light.svg">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/16px/external-light.svg">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/16px/email-light.svg">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/16px/phone-light.svg">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/16px/sms-light.svg">
+		</td>
+		<td class="columns">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/16px/facebook-dark.svg">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/16px/instagram-dark.svg">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/16px/x-dark.svg">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/16px/linkedin-dark.svg">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/16px/tiktok-dark.svg">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/16px/youtube-dark.svg">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/16px/section-dark.svg">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/16px/internal-dark.svg">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/16px/external-dark.svg">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/16px/email-dark.svg">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/16px/phone-dark.svg">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/16px/sms-dark.svg">
+		</td>
+	</tr>
+	<tr>
+		<td>22px</td>
+		<td class="dark columns">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/22px/facebook-light.svg">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/22px/instagram-light.svg">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/22px/x-light.svg">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/22px/linkedin-light.svg">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/22px/tiktok-light.svg">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/22px/youtube-light.svg">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/22px/section-light.svg">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/22px/internal-light.svg">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/22px/external-light.svg">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/22px/email-light.svg">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/22px/phone-light.svg">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/22px/sms-light.svg">
+		</td>
+		<td class="columns">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/22px/facebook-dark.svg">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/22px/instagram-dark.svg">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/22px/x-dark.svg">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/22px/linkedin-dark.svg">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/22px/tiktok-dark.svg">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/22px/youtube-dark.svg">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/22px/section-dark.svg">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/22px/internal-dark.svg">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/22px/external-dark.svg">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/22px/email-dark.svg">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/22px/phone-dark.svg">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/22px/sms-dark.svg">
+		</td>
+	</tr>
+	<tr>
+		<td>28px</td>
+		<td class="dark columns">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/28px/facebook-light.svg">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/28px/instagram-light.svg">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/28px/x-light.svg">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/28px/linkedin-light.svg">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/28px/tiktok-light.svg">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/28px/youtube-light.svg">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/28px/section-light.svg">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/28px/internal-light.svg">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/28px/external-light.svg">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/28px/email-light.svg">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/28px/phone-light.svg">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/28px/sms-light.svg">
+		</td>
+		<td class="columns">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/28px/facebook-dark.svg">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/28px/instagram-dark.svg">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/28px/x-dark.svg">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/28px/linkedin-dark.svg">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/28px/tiktok-dark.svg">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/28px/youtube-dark.svg">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/28px/section-dark.svg">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/28px/internal-dark.svg">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/28px/external-dark.svg">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/28px/email-dark.svg">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/28px/phone-dark.svg">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/28px/sms-dark.svg">
+		</td>
+	</tr>
+	<tr>
+		<td>32px</td>
+		<td class="dark columns">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/32px/facebook-light.svg">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/32px/instagram-light.svg">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/32px/x-light.svg">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/32px/linkedin-light.svg">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/32px/tiktok-light.svg">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/32px/youtube-light.svg">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/32px/section-light.svg">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/32px/internal-light.svg">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/32px/external-light.svg">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/32px/email-light.svg">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/32px/phone-light.svg">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/32px/sms-light.svg">
+		</td>
+		<td class="columns">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/32px/facebook-dark.svg">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/32px/instagram-dark.svg">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/32px/x-dark.svg">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/32px/linkedin-dark.svg">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/32px/tiktok-dark.svg">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/32px/youtube-dark.svg">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/32px/section-dark.svg">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/32px/internal-dark.svg">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/32px/external-dark.svg">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/32px/email-dark.svg">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/32px/phone-dark.svg">
+			<img src="https://cdn.jakelabate.com/custom-link-cursors/cursors/32px/sms-dark.svg">
+		</td>
+	</tr>
+	</tbody>
+</table>
+
+</body>
+</html>
