@@ -4,6 +4,10 @@ document.addEventListener("DOMContentLoaded", function () {
 	const parts = hostname.split('.');
 	const currentDomain = parts.length > 2 ? parts.slice(-2).join('.') : hostname;
 
+	const scriptTag = document.getElementById('custom-link-cursors');
+	let cursorSize = scriptTag.getAttribute('data-cursor-size') || '22';
+	if (!cursorSize.endsWith('px')) cursorSize += 'px';
+
 	const links = document.querySelectorAll('a');
 	links.forEach(linkElement => {
 
@@ -24,9 +28,6 @@ document.addEventListener("DOMContentLoaded", function () {
 		const linkType = determineLinkType(linkElement.href, currentDomain);
 
 		// determine link size
-		const scriptTag = document.getElementById('custom-link-size');
-		let cursorSize = scriptTag.getAttribute('data-cursor-size') || '22';
-		if (!cursorSize.endsWith('px')) cursorSize += 'px';
 
 		// create cursor
 		linkElement.style.cursor = `url('https://cdn.jakelabate.com/custom-link-cursors/cursors/${cursorSize}/${linkType}-${linkColor}.svg'), auto`;
