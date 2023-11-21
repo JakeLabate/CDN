@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+
+
+</head>
+<body>
+
+<script>
+
+	// company & page variables
+	let payload = {
+		company: {
+			name: "Company Name",
+			url: window.location.hostname,
+			rating: {
+				count: 37,
+				value: 4.8,
+			}
+		},
+		page: {
+			name: document.title,
+			url: window.location.href,
+			minPrice: 1000,
+			maxPrice: 5000,
+		}
+	};
+
+	// stringify & save the object
+	let json = JSON.stringify(payload);
+	window.autoAddSchemaMarkupStringified = json;
+	localStorage.setItem('autoAddSchemaMarkupStringified', json);
+
+</script>
+
+<script src="script.js"></script>
+
+</body>
+</html>

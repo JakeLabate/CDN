@@ -1,3 +1,5 @@
+
+/*
 const tagToSchema = {
 	'ul': 'ItemList',
 	'ol': 'ItemList',
@@ -92,6 +94,116 @@ for (const [tag, itemtype] of Object.entries(tagToSchema)) {
 	});
 }
 
-// just for testing convenience // not using the schema.org validator as it only checks source code (not DOM code)
+ */
+
+
+
+
+
+
+// get & parse the JSON from localStorage
+const stringifiedJSON = localStorage.getItem('autoAddSchemaMarkupStringified');
+const variable = JSON.parse(stringifiedJSON);
+
+// convert the parent key to 'variable'
+console.log(variable);
+
+// create the schema
+const schema = {
+	"@context": "https://schema.org",
+	"@graph": [
+		{
+			"@type": "WebSite",
+			"@id": `${variable.company.url}#webSite`,
+			"url": `${variable.company.url}`,
+			"name": `${variable.company.name}`,
+		},
+		{
+			"@type": "Organization",
+			"@id": `${variable.company.url}#organization`,
+			"url": `${variable.company.url}`,
+			"name": `${variable.company.name}`,
+			"brand": {
+				"@type": "Brand",
+				"@id": `${variable.company.url}#brand`,
+				"url": `${variable.company.url}`,
+				"name": `${variable.company.name}`,
+			}
+		},
+		{
+			"@type": "ItemPage",
+			"@id": `${variable.page.url}#itemPage`,
+			"url": `${variable.page.url}`,
+			"name": `${variable.page.name}`,
+			"isPartOf": {
+				"@type": "WebSite",
+				"@id": `${variable.company.url}#webSite`,
+			}
+		},
+		{
+			"@type": "BreadcrumbList",
+			"@id": `${variable.page.url}#breadcrumbList`,
+			"name": `${variable.page.name}`,
+			"itemListElement": [
+				{
+					"@type": "ListItem",
+					"@id": `${variable.page.url}#breadcrumbItem`,
+					"name": `${variable.page.name}`,
+					"position": 1,
+					"item": `${variable.page.url}`
+				}
+			]
+		},
+		{
+			"@type": "Service",
+			"@id": `${variable.page.url}#service`,
+			"url": `${variable.page.url}`,
+			"name": `${variable.page.name}`,
+			"description": '',
+			"serviceType": "SEO",
+			"offers": {
+				"@type": "Offer",
+				"availability": "InStock"
+			}
+		},
+		{
+			"@type": "AggregateRating",
+			"@id": `${variable.page.url}#aggregateRating`,
+			"url": `${variable.page.url}`,
+			"ratingCount": `${variable.company.rating.count}`,
+			"ratingValue": `${variable.company.rating.value}`,
+			"bestRating": 5,
+			"itemReviewed": {
+				"@type": "Product",
+				"@id": `${variable.page.url}#product`,
+				"url": `${variable.page.url}`,
+				"name": `${variable.page.name}`,
+				"aggregateRating": {
+					"@id": `${variable.page.url}#aggregateRating`,
+					"url": `${variable.page.url}`,
+					"ratingCount": `${variable.company.rating.count}`,
+					"ratingValue": `${variable.company.rating.value}`,
+					"bestRating": 5,
+				},
+				"offers": {
+					"@type": "AggregateOffer",
+					"@id": `${variable.page.url}#aggregateOffer`,
+					"url": `${variable.page.url}`,
+					"lowPrice": `${variable.page.minPrice}`,
+					"highPrice": `${variable.page.maxPrice}`,
+					"priceCurrency": "USD"
+				}
+			}
+		}
+	]
+}
+
+// add the schema to the DOM
+const script = document.createElement('script');
+script.type = 'application/ld+json';
+script.innerHTML = JSON.stringify(schema);
+document.head.appendChild(script);
+
+// for testing convenience
 const googleTest = 'https://search.google.com/test/rich-results?url='
 console.log(`${googleTest}${window.location.href}`);
