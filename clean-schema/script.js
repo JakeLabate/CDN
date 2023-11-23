@@ -16,7 +16,6 @@ function removeEmptyKeys(json) {
 	}
 	return json;
 }
-
 function replaceRepeatObjects(obj, idMap = {}) {
 	const replaceObject = (o) => {
 		if (o && typeof o === 'object') {
@@ -38,7 +37,6 @@ function replaceRepeatObjects(obj, idMap = {}) {
 	};
 	return replaceObject(obj);
 }
-
 function removeTypesWithUnmetRequiredKeys(data) {
 	if (Array.isArray(data)) {
 		return data.map(item => removeTypesWithUnmetRequiredKeys(item));
