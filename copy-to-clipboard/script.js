@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', function() {
 	function copyToClipboard(text) {
 		if (navigator.clipboard) {
 
-			// modern browsers
 			navigator.clipboard.writeText(text)
 			.then(function() { alert('Copied!'); })
 
