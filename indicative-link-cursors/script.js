@@ -20,7 +20,7 @@ function getCurrentDomain() {
 
 // get the cursor size from the script tag
 function getCursorSize() {
-	const scriptTag = document.getElementById('custom-link-cursors');
+	const scriptTag = document.getElementById('indicative-link-cursors');
 	let cursorSize = scriptTag.getAttribute('data-cursor-size') || '22'; // default to 22px
 	return cursorSize.endsWith('px') ? cursorSize : cursorSize + 'px';
 }
@@ -66,7 +66,7 @@ function determineLinkColor(linkElement) {
 // set the custom cursor based on size, type, and color
 function setCustomCursor(linkElement, cursorSize, linkType, linkColor) {
 	const cursorColor = linkColor === 'dark' ? 'light' : 'dark';
-	linkElement.style.cursor = `url('https://cdn.jakelabate.com/custom-link-cursors/cursors/${cursorSize}/${linkType}-${cursorColor}.svg'), auto`;
+	linkElement.style.cursor = `url('https://cdn.jakelabate.com/indicative-link-cursors/cursors/${cursorSize}/${linkType}-${cursorColor}.svg'), auto`;
 }
 
 // check if the link is external to the current domain
