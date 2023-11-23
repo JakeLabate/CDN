@@ -1,0 +1,15 @@
+@keyframes fade-in-up {
+	0% { opacity: 0; }
+	100% { transform: translateY(0); opacity: 1; }
+}
+
+.video-stuck {
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+	transform: translateY(100%);
+	width: 260px;
+	height: 145px !important;
+	animation: fade-in-up .25s ease forwards;
+	z-index: 999999999;
+}
