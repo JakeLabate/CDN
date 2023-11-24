@@ -1,2 +1,30 @@
 <!-- Automated Schema by Jake Labate | https://www.jakelabate.com/code/automated-schema -->
+
+<script>
+
+	// company & page variables
+	let payload = {
+		company: {
+			name: "Company Name",
+			url: window.location.hostname,
+			rating: {
+				count: 37,
+				value: 4.8,
+			}
+		},
+		page: {
+			name: document.title,
+			url: window.location.href,
+			minPrice: 1000,
+			maxPrice: 5000,
+		}
+	};
+
+	// stringify & save the object
+	let json = JSON.stringify(payload);
+	window.autoAddSchemaMarkupStringified = json;
+	localStorage.setItem('autoAddSchemaMarkupStringified', json);
+
+</script>
+
 <script src="https://cdn.jakelabate.com/automated-schema/script.js"></script>
