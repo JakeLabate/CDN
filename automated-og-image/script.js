@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", function () {
 
 	// continue if no og:image
