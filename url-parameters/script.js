@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	for (const [param, value] of urlParams) {
 
 		// for each parameter name, find the elements with the attributes jl-url-param
-		const elements = document.querySelectorAll(`[jl-url-param="${param}"]`);
+		const elements = document.querySelectorAll(`[jl-url-parameter="${param}"]`);
 
 		// loop through the elements
 		for (const element of elements) {
