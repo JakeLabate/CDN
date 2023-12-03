@@ -1,5 +1,3 @@
-
-/*
 const tagToSchema = {
 	'ul': 'ItemList',
 	'ol': 'ItemList',
@@ -23,13 +21,10 @@ const tagToSchema = {
 };
 
 function type(el, type) {
-
 	el.setAttribute('itemscope', '');
-	el.setAttribute('itemtype', 'http://schema.org/' + type);
-
+	el.setAttribute('itemtype', 'https://schema.org/' + type);
 }
 function id(el, type) {
-
 	// ensure string & convert to camelCase
 	function camelCase(input) {
 		input = String(input);
@@ -94,7 +89,9 @@ for (const [tag, itemtype] of Object.entries(tagToSchema)) {
 	});
 }
 
- */
+
+
+
 
 // get & parse the JSON from localStorage
 const stringifiedJSON = localStorage.getItem('autoAddSchemaMarkupStringified');
