@@ -28,6 +28,12 @@ You can set the pixel size of the cursor in the 'data-cursor-size' attribute. Av
 		color: #111;
 		width: 100%;
 	}
+	td.m-hide, th.m-hide {
+        padding: 0 !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 	@media only screen and (max-width: 768px) {
 		td.m-hide, th.m-hide {
 			display: none;
