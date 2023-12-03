@@ -1,5 +1,6 @@
 You can set the pixel size of the cursor in the 'data-cursor-size' attribute. Available cursor sizes range for 16 - 32.
 
+<html>
 <style>
 	table {
 		width: 100%;
@@ -29,7 +30,7 @@ You can set the pixel size of the cursor in the 'data-cursor-size' attribute. Av
 		width: 100%;
 	}
 	td.m-hide, th.m-hide {
-        padding: 0 !important;
+        padding: 6px 12px !important;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -56,7 +57,7 @@ You can set the pixel size of the cursor in the 'data-cursor-size' attribute. Av
 	<tr>
 		<td>Facebook</td>
 		<td><img src="https://cdn.jakelabate.com/indicative-link-cursors/cursors/24px/facebook-dark.svg"></td>
-		<td class="m-hide"><a class="light" data-u="false"  style="cursor: url('https://cdn.jakelabate.com/indicative-link-cursors/cursors/24px/facebook-dark.svg'), auto" href="hhtps://www.facebook.com/drjordanpeterson" target="_blank">https://www.facebook.com/drjordanpeterson</a></td>
+		<td class="m-hide"><a class="light" data-u="false"  style="cursor: url('https://cdn.jakelabate.com/indicative-link-cursors/cursors/24px/facebook-dark.svg'), auto" href="https://www.facebook.com/drjordanpeterson" target="_blank">https://www.facebook.com/drjordanpeterson</a></td>
 	</tr>
 	<tr>
 		<td>Instagram</td>
@@ -256,3 +257,5 @@ You can set the pixel size of the cursor in the 'data-cursor-size' attribute. Av
 	</tr>
 	</tbody>
 </table>
+
+</html>
