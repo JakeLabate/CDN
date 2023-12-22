@@ -9,12 +9,9 @@ document.addEventListener("DOMContentLoaded", function() {
 	// find the elements with the attribute jl-read-time
 	const elements = document.querySelectorAll("[jl-read-time]");
 
-	// loop through the elements
+	// set the element's innerHTML to the estimated read time
 	for (const element of elements) {
-
-		// set the element's innerHTML to the estimated read time
 		element.innerHTML = `${readTimeInMinutes} minutes`;
-
 	}
 
 });
