@@ -1,1 +1,0 @@
-Copy and paste the embed tag above to implement this feature. For input or textarea tags you wish to exclude, mark them with an attribute name and value of: <code>jl-funny-placeholder="skip"</code>.

@@ -1,5 +1,5 @@
-// JavaScript for Sticky Video
 document.addEventListener('scroll', function() {
+
 	const videoWrap = document.querySelector('#stuck-video-wrap');
 	const video = document.querySelector('#stuck-video');
 	const videoHeight = video.offsetHeight;
@@ -15,4 +15,5 @@ document.addEventListener('scroll', function() {
 		video.classList.remove('video-stuck');
 		video.style.paddingTop = '56.17021276595745%';
 	}
+
 });

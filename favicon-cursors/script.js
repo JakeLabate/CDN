@@ -1,23 +1,17 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-	// Cache to store tested URLs and their favicon existence
 	const faviconCache = {};
 
-	// Function to get favicon URL from path
 	function getFaviconURLFromPath(url) {
 		const link = document.createElement('a');
 		link.href = url;
 		return link.protocol + '//' + link.hostname + '/favicon.ico';
 	}
-
-	// Function to get favicon URL from Google's service
 	function getFaviconURLFromGoogle(url) {
 		const link = document.createElement('a');
 		link.href = url;
 		return 'https://www.google.com/s2/favicons?domain=' + link.hostname;
 	}
-
-	// Function to test if an image exists
 	function testImage(url, callback) {
 		if (faviconCache.hasOwnProperty(url)) {
 			callback(faviconCache[url]);
@@ -35,8 +29,6 @@ document.addEventListener('DOMContentLoaded', function() {
 		};
 		img.src = url;
 	}
-
-	// Function to set cursor style
 	function setCursorStyle(link, url, fallbackUrl) {
 		testImage(url, function(exists) {
 			if (exists) {
@@ -52,6 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	// Attach event listeners to each <a> tag
 	document.querySelectorAll('a').forEach(function(link) {
+
 		link.addEventListener('mouseover', function() {
 
 			// Get the URL without the hash or query string

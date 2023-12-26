@@ -17,7 +17,6 @@ document.addEventListener('DOMContentLoaded', function() {
 			if (navigator.share) {
 				navigator.share({
 
-					// link page data to navigator.share functionality
 					title: title,
 
 					// add utm parameters to track where the share came from

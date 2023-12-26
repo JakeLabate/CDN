@@ -33,7 +33,9 @@ document.addEventListener('DOMContentLoaded', function() {
 	// Process elements
 	const elements = document.querySelectorAll('input, textarea');
 	elements.forEach(element => {
-		if (element.getAttribute('jl-funny-placeholder') === 'skip') {
+
+		const skipElement = element.getAttribute('jl-funny-placeholder') === 'skip';
+		if (skipElement) {
 			return;
 		}
 
@@ -46,4 +48,5 @@ document.addEventListener('DOMContentLoaded', function() {
 
 		updatePlaceholder(element);
 	});
+
 });

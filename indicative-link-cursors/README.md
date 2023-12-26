@@ -1,1 +1,0 @@
-You can set the pixel size of the cursor in the 'data-cursor-size' attribute. Available cursor sizes range for 16 - 32.
