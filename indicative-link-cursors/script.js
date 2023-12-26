@@ -11,6 +11,13 @@ document.addEventListener("DOMContentLoaded", function () {
 		return cursorSize.endsWith('px') ? cursorSize : cursorSize + 'px';
 	}
 	function determineLinkType(href, currentDomain) {
+
+		function isExternalLink(href, currentDomain) {
+			const domainRegex = /https?:\/\/(?:www\.)?[^\/]+/;
+			const match = domainRegex.exec(href);
+			return match && match[0] !== `https://${currentDomain}` && match[0] !== `http://${currentDomain}`;
+		}
+
 		const linkTypeMappings = {
 			'facebook.com': 'facebook',
 			'twitter.com': 'x',
@@ -48,19 +55,14 @@ document.addEventListener("DOMContentLoaded", function () {
 		const cursorColor = linkColor === 'dark' ? 'light' : 'dark';
 		linkElement.style.cursor = `url('https://cdn.jakelabate.com/indicative-link-cursors/cursors/${cursorSize}/${linkType}-${cursorColor}.svg'), auto`;
 	}
-	function isExternalLink(href, currentDomain) {
-		const domainRegex = /https?:\/\/(?:www\.)?[^\/]+/;
-		const match = domainRegex.exec(href);
-		return match && match[0] !== `https://${currentDomain}` && match[0] !== `http://${currentDomain}`;
-	}
 
-	const currentDomain = getCurrentDomain();
+	const domain = getCurrentDomain();
 	const cursorSize = getCursorSize();
 
-	document.querySelectorAll('a').forEach(linkElement => {
-		const linkType = determineLinkType(linkElement.href, currentDomain);
-		const linkColor = determineLinkColor(linkElement);
-		setCustomCursor(linkElement, cursorSize, linkType, linkColor);
+	document.querySelectorAll('a').forEach(link => {
+		const linkType = determineLinkType(link.href, domain);
+		const linkColor = determineLinkColor(link);
+		setCustomCursor(link, cursorSize, linkType, linkColor);
 	});
 
 });

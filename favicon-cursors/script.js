@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 
 	// Attach event listeners to each <a> tag
-	document.querySelectorAll('a').forEach(function(link) {
+	document.querySelectorAll('a').forEach(link => {
 
 		link.addEventListener('mouseover', function() {
 

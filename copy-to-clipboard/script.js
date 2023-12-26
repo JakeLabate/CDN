@@ -23,8 +23,8 @@ document.addEventListener('DOMContentLoaded', function() {
 		// add click event
 		element.addEventListener('click', function() {
 			const customText = element.getAttribute('jl-copy-to-clipboard-text');
-			const priorityList = customText || element.value || element.textContent || element.innerText || element.innerHTML;
-			copy(priorityList);
+			const content = customText || element.value || element.textContent || element.innerText || element.innerHTML;
+			copy(content);
 		});
 
 		// add cursor if attribute is true

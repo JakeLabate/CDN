@@ -1,15 +1,33 @@
 document.addEventListener("DOMContentLoaded", function() {
 
-	// get the h1-h6 elements, in order of appearance
-	let headingArray = [];
+	let headingLinks = '';
+
 	const headings = document.querySelectorAll("h1, h2, h3, h4, h5, h6");
+	headings.forEach(heading => {
 
-	// loop through the headings
-	for (const heading of headings) {
+		let id;
+		switch (heading.id) {
+			case null:
+			case '':
+			case 'undefined':
+				id = heading.innerText.toLowerCase().replace(/ /g, "-");
+				heading.id = id;
+				break;
+			default:
+				id = heading.id;
+		}
 
-		// push the heading to the headingArray
-		headingArray.push(heading);
+		const a = document.createElement('a');
+		a.href = '#' + id;
+		a.title = heading.innerText;
+		a.innerHTML = heading.innerText;
+		a.className = 'jl-table-of-contents-link ' + heading.nodeName;
 
-	}
+		headingLinks += a.outerHTML;
+
+	});
+
+	const wrap = document.querySelector('[jl-table-of-contents="true"]');
+	wrap.innerHTML = headingLinks;
 
 });
