@@ -4,6 +4,7 @@ function id(type = 'Thing', identifier = 'PLACEHOLDER') {
 	// ensure string & convert to camelCase
 	function camelCase(input) {
 		input = String(input);
+
 		return input
 		.toLowerCase()
 		.split(' ')

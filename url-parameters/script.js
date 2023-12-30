@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", function() {
 
-	// get all the url parameters
+	const urlParametersAttribute = 'jl-url-parameter';
+
 	const urlParams = new URLSearchParams(window.location.search);
 	urlParams.forEach((param, value) => {
 
-		// place the param values in the elements
-		const elements = document.querySelectorAll(`[jl-url-parameter="${param}"]`);
+		const elements = document.querySelectorAll(`[${urlParametersAttribute}='${param}']`);
 		elements.forEach(element => {
 			element.innerHTML = value;
 		});

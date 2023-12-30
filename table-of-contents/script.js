@@ -7,14 +7,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
 		let id;
 		switch (heading.id) {
-			case null:
-			case '':
-			case 'undefined':
+			case true:
+				id = heading.id;
+				break;
+			case false:
 				id = heading.innerText.toLowerCase().replace(/ /g, "-");
 				heading.id = id;
 				break;
-			default:
-				id = heading.id;
+
 		}
 
 		const a = document.createElement('a');

@@ -1,36 +1,36 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-	// copy to clipboard action
-	function copy(text) {
+	const copyAttribute = 'jl-copy-to-clipboard';
+	const customTextAttribute = 'jl-copy-to-clipboard-text';
+	const customCursorAttribute = 'jl-copy-to-clipboard-cursor';
+	const customCursorUrl = "url('https://cdn.jakelabate.com/copy-to-clipboard/copy-icon.svg'), auto"
+
+	function copyContent(content) {
 		if (navigator.clipboard) {
-			navigator.clipboard.writeText(text)
-			.then(() => { alert('Copied!'); })
+			navigator.clipboard.writeText(content).then(() => { alert('Copied!'); })
 		} else {
 			const textarea = document.createElement('textarea');
-			textarea.value = text;
+			textarea.value = content;
 			document.body.appendChild(textarea);
 			textarea.select();
 			document.execCommand('copy');
-			document.body.removeChild(textarea);
+			document.body.removeChild(textarea)
 			alert('Copied!');
 		}
 	}
 
-	// select all elements with attribute
-	const copyElements = document.querySelectorAll('[jl-copy-to-clipboard="true"]');
-	copyElements.forEach(element => {
-
-		// add click event
+	function setCopyElement(element) {
+		element.getAttribute(customCursorAttribute)? element.style.cursor = customCursorUrl : null;
 		element.addEventListener('click', function() {
-			const customText = element.getAttribute('jl-copy-to-clipboard-text');
+			const customText = element.getAttribute(customTextAttribute);
 			const content = customText || element.value || element.textContent || element.innerText || element.innerHTML;
-			copy(content);
+			copyContent(content);
 		});
+	}
 
-		// add cursor if attribute is true
-		if (element.getAttribute('jl-copy-to-clipboard-cursor') === 'true') {
-			element.style.cursor = "url('https://cdn.jakelabate.com/copy-to-clipboard/copy-icon.svg'), auto";
-		}
-
+	const copyableElements = document.querySelectorAll(copyAttribute);
+	copyableElements.forEach(element => {
+		setCopyElement(element);
 	});
+
 });
