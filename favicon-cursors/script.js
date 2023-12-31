@@ -2,12 +2,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	const faviconCache = {};
 
-	function getFaviconURLFromPath(url) {
-		const link = document.createElement('a').href = url;
+	function getFaviconURLFromPath(href) {
+		const link = document.createElement('a').href = href;
 		return link.protocol + '//' + link.hostname + '/favicon.ico';
 	}
-	function getFaviconURLFromGoogle(url) {
-		const link = document.createElement('a').href = url;
+	function getFaviconURLFromGoogle(href) {
+		const link = document.createElement('a').href = href;
 		return 'https://www.google.com/s2/favicons?domain=' + link.hostname;
 	}
 
@@ -53,8 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	}
 
-	const links = document.querySelectorAll('a');
-	links.forEach(link => {
+	document.querySelectorAll('a').forEach(link => {
 		setCursorStyle(link);
 	});
 

@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-	const scriptTag = document.querySelector('script[src="https://cdn.jakelabate.com/funny-placeholders/script.js');
-	const nsfwAttribute = scriptTag.getAttribute('funny-placeholder-nsfw');
+	const skipAttribute = 'funny-placeholder-skip';
+	const nsfwAttribute = 'funny-placeholder-nsfw';
 
-	const skipInputAttribute = 'funny-placeholder-skip';
+	const scriptTag = document.querySelector('script[src="https://cdn.jakelabate.com/funny-placeholders/script.js');
 
 	const funnyPlaceholders = [
 		'miss you...',
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		"lmao did you're dumbass spell it wrong?",
 	];
 
-	const placeholdersArray = nsfwAttribute ? nsfwPlaceholders : funnyPlaceholders;
+	const placeholdersArray = !!scriptTag.getAttribute(nsfwAttribute) ? nsfwPlaceholders : funnyPlaceholders;
 
 	function setFunnyPlaceholder(element) {
 		element.addEventListener('input', function() {
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	document.querySelectorAll('input, textarea').forEach(element => {
 		switch (element) {
-			case element.getAttribute(skipInputAttribute):
+			case element.getAttribute(skipAttribute):
 			case element.type = 'date':
 			case element.type = 'time':
 			case element.type = 'datetime-local':

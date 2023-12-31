@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	const copyAttribute = 'jl-copy-to-clipboard';
 	const customTextAttribute = 'jl-copy-to-clipboard-text';
 	const customCursorAttribute = 'jl-copy-to-clipboard-cursor';
-	const customCursorUrl = "url('https://cdn.jakelabate.com/copy-to-clipboard/copy-icon.svg'), auto"
+	const customCursorUrl = 'https://cdn.jakelabate.com/copy-to-clipboard/copy-icon.svg';
 
 	function copyContent(content) {
 		if (navigator.clipboard) {
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 
 	function setCopyElement(element) {
-		element.getAttribute(customCursorAttribute)? element.style.cursor = customCursorUrl : null;
+		element.getAttribute(customCursorAttribute)? element.style.cursor = `url(${customCursorUrl}), auto` : null;
 		element.addEventListener('click', function() {
 			const customText = element.getAttribute(customTextAttribute);
 			const content = customText || element.value || element.textContent || element.innerText || element.innerHTML;

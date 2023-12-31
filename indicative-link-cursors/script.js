@@ -58,13 +58,10 @@ document.addEventListener("DOMContentLoaded", function () {
 	const size = setCursorSize();
 
 	document.querySelectorAll('a').forEach(link => {
-
 		const type = setLinkType(link.href);
 		const color = setCursorColor(link);
-
 		const cursorUrl = `https://cdn.jakelabate.com/indicative-link-cursors/cursors/${size}/${type}-${color}.svg`;
 		link.style.cursor = `url(${cursorUrl}), auto`;
-
 	});
 
 });
