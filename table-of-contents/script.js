@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
 
+	const placementAttribute = 'jl-table-of-contents';
+
 	let headingLinks = '';
 
 	const headings = document.querySelectorAll("h1, h2, h3, h4, h5, h6");
@@ -22,12 +24,10 @@ document.addEventListener("DOMContentLoaded", function() {
 		a.title = heading.innerText;
 		a.innerHTML = heading.innerText;
 		a.className = 'jl-table-of-contents-link ' + heading.nodeName;
-
 		headingLinks += a.outerHTML;
 
 	});
 
-	const wrap = document.querySelector('[jl-table-of-contents="true"]');
-	wrap.innerHTML = headingLinks;
+	document.querySelector(`[${placementAttribute}="true"]`).innerHTML = headingLinks
 
 });

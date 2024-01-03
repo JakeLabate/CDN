@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	const copyAttribute = 'jl-copy-to-clipboard';
 	const customTextAttribute = 'jl-copy-to-clipboard-text';
 	const customCursorAttribute = 'jl-copy-to-clipboard-cursor';
+
 	const customCursorUrl = 'https://cdn.jakelabate.com/copy-to-clipboard/copy-icon.svg';
 
 	function copyContent(content) {
@@ -28,8 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		});
 	}
 
-	const copyableElements = document.querySelectorAll(copyAttribute);
-	copyableElements.forEach(element => {
+	document.querySelectorAll(copyAttribute).forEach(element => {
 		setCopyElement(element);
 	});
 
