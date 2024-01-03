@@ -89,10 +89,6 @@ for (const [tag, itemtype] of Object.entries(tagToSchema)) {
 	});
 }
 
-
-
-
-
 // get & parse the JSON from localStorage
 const stringifiedJSON = localStorage.getItem('autoAddSchemaMarkupStringified');
 const variable = JSON.parse(stringifiedJSON);
