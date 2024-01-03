@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", function() {
 	const placementAttribute = 'jl-table-of-contents';
 
 	let headingLinks = '';
-
 	const headings = document.querySelectorAll("h1, h2, h3, h4, h5, h6");
 	headings.forEach(heading => {
 
@@ -16,7 +15,6 @@ document.addEventListener("DOMContentLoaded", function() {
 				id = heading.innerText.toLowerCase().replace(/ /g, "-");
 				heading.id = id;
 				break;
-
 		}
 
 		const a = document.createElement('a');
