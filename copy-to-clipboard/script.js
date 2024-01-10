@@ -21,12 +21,17 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 
 	function setCopyElement(element) {
-		element.getAttribute(customCursorAttribute)? element.style.cursor = `url(${customCursorUrl}), auto` : null;
+
 		element.addEventListener('click', function() {
 			const customText = element.getAttribute(customTextAttribute);
 			const content = customText || element.value || element.textContent || element.innerText || element.innerHTML;
 			copyContent(content);
 		});
+
+		if (element.getAttribute(customCursorAttribute)) {
+			element.style.cursor = `url(${customCursorUrl}), auto`;
+		}
+
 	}
 
 	document.querySelectorAll(copyAttribute).forEach(element => {
