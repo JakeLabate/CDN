@@ -1,5 +1,5 @@
 const xhr = new XMLHttpRequest();
-xhr.open("POST", 'https://services.jakelabate.com/og-image', true);
+xhr.open("GET", 'https://services.jakelabate.com/og-image', true);
 xhr.setRequestHeader("Content-Type", "application/json");
 
 xhr.onreadystatechange = function() {
