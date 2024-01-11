@@ -5,11 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	xhr.setRequestHeader("Content-Type", "application/json");
 
 	xhr.onreadystatechange = function() {
-		if (xhr.readyState === 4 && xhr.status === 200) {
-			console.log("Response:", xhr.responseText);
-		} else {
-			console.error("Request failed:", xhr.status);
-		}
+		console.log(xhr.responseText);
 	}
 
 	const payload = {
