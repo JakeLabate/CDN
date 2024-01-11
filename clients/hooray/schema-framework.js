@@ -3,15 +3,15 @@ xhr.open("POST", 'https://services.jakelabate.com/og-image', true);
 xhr.setRequestHeader("Content-Type", "application/json");
 
 xhr.onreadystatechange = function() {
-	if (xhr.readyState === XMLHttpRequest.DONE) { // Equivalent to readyState 4
+	console.log("Ready State:", xhr.readyState, "Status:", xhr.status);
+	if (xhr.readyState === XMLHttpRequest.DONE) {
 		if (xhr.status === 200) {
-			console.log(xhr.responseText);
+			console.log("Response:", xhr.responseText);
 		} else {
-			console.error("Request failed: " + xhr.status);
+			console.error("Request failed:", xhr.status);
 		}
 	}
 };
-
 
 const payload = {
 	title: document.title || document.querySelector('h1').innerText,
