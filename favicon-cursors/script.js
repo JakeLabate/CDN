@@ -41,7 +41,6 @@ document.addEventListener('DOMContentLoaded', function() {
 			}
 		});
 
-		// reset cursor on mouseout
 		link.addEventListener('mouseout', function() {
 			link.style.cursor = 'auto';
 		});
