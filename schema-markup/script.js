@@ -13,11 +13,8 @@ document.addEventListener("DOMContentLoaded", function () {
 	}
 
 	const payload = {
-		title: document.title || document.querySelector('h1').innerText,
-		logoUrl: document.querySelector('img').src,
-		imageUrl: document.querySelector('img').src,
-		textColor: '#000000',
-		backgroundColor: '#ffffff',
+		name: document.title || document.querySelector('h1').innerText,
+		url: window.location.href.split('?')[0].split('#')[0],
 	};
 
 	xhr.send(JSON.stringify(payload));
@@ -25,6 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+/*
 
 const tagToSchema = {
 	'ul': 'ItemList',
@@ -223,3 +221,5 @@ document.head.appendChild(script);
 // for testing convenience
 const googleTest = 'https://search.google.com/test/rich-results?url='
 console.log(`${googleTest}${window.location.href}`);
+
+ */
