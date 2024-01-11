@@ -31,12 +31,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	function setLinkType(href) {
 
-		// check for match
 		for (const [key, value] of linkTypes) {
 			if (href.toLowerCase().includes(key)) return value;
 		}
 
-		// check for external link
 		const domainRegex = /https?:\/\/(?:www\.)?[^\/]+/;
 		const match = domainRegex.exec(href);
 		const isExternalLink = match && match[0] !== `https://${domain}` && match[0] !== `http://${domain}`;
