@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	}
 
 	const payload = {
-		sitemap: 'https://wwwjakelabate.com/sitemap.xml'
+		sitemap: 'https://www.jakelabate.com/sitemap.xml'
 	};
 
 	xhr.send(JSON.stringify(payload));
