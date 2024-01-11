@@ -6,10 +6,10 @@ function id(type = 'Thing', identifier = 'PLACEHOLDER') {
 		input = String(input);
 
 		return input
-		.toLowerCase()
-		.split(' ')
-		.map((word, index) => index ? word.charAt(0).toUpperCase() + word.slice(1) : word)
-		.join('');
+			.toLowerCase()
+			.split(' ')
+			.map((word, index) => index ? word.charAt(0).toUpperCase() + word.slice(1) : word)
+			.join('');
 	}
 
 	// construct & return schema @id
