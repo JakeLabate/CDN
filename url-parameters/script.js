@@ -14,9 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 });
 
-
-const urlParameters = new URLSearchParams(window.location.search);
-urlParameters.forEach((parameter, value) => {
+function process_utm_parameter(parameter, value) {
     
     switch (parameter) {
         
@@ -41,5 +39,10 @@ urlParameters.forEach((parameter, value) => {
         // i.e. keyword, las vegas locals, etc.
         
     }
+}
 
+
+const urlParameters = new URLSearchParams(window.location.search);
+urlParameters.forEach((parameter, value) => {
+    process_utm_parameter(parameter, value);
 });
