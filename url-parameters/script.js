@@ -16,6 +16,16 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 const urlParameters = new URLSearchParams(window.location.search);
-urlParameters.forEach((param, value) => {
+urlParameters.forEach((parameter, value) => {
+    
+    switch (parameter) {
+        
+        case 'utm_source':
+        case 'utm_medium':
+        case 'utm_campaign':
+        case 'utm_content':
+        case 'utm_term':
+        
+    }
 
 });
