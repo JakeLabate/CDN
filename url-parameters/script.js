@@ -48,7 +48,7 @@ function process_utm_parameter(parameter, value) {
 
         break;
         
-        case 'utm_creative_format':
+        case 'utm_creative_format': // post format // not detected by Google
         // utm_creative_format=text
         // utm_creative_format=video
         
