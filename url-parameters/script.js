@@ -13,3 +13,9 @@ document.addEventListener("DOMContentLoaded", function() {
 	});
 
 });
+
+
+const urlParameters = new URLSearchParams(window.location.search);
+urlParameters.forEach((param, value) => {
+
+});
