@@ -18,40 +18,41 @@ function process_utm_parameter(parameter, value) {
     
     switch (parameter) {
         
-        case 'utm_medium':
-        // channel
-        // The type of traffic you are receiving.
-        // i.e. cpc, organic, post, promoted, boosted, etc.
+        case 'utm_medium': // channel
+        // utm_medium=social
+        // utm_medium=organic
         
         break;
         
-        case 'utm_source':
-        // channel source
-        // The source of the traffic you are receiving. Normally this is the domain or business name
-        // i.e. google, facebook, nytimes, yelp, etc
+        case 'utm_source': // channel source
+        // utm_source=google
+        // utm_source=yelp
         
         break;
         
-        case 'utm_campaign':
-        // campaign
-        // The name of the campaign or promotion you are running.
-        // i.e. thanksgiving sale, 2 for 1 deal, etc.
+        case 'utm_campaign': // campaign
+        // utm_campaign=testimonials
+        // utm_campaign=lca_contributions
         
         break;
         
-        case 'utm_content':
-        // nature/type of creative 
-        // The type of ad or creative being used
-        // i.e. video, image, negative emotion, humor, etc
+        case 'utm_content': // nature/type of creative 
+        // utm_content=question
+        // utm_content=humor
         
         break;
         
-        case 'utm_term':
-        // misc. tag/label
-        // The keyword or audience who clicked on your link
-        // i.e. keyword, las vegas locals, etc.
+        case 'utm_term': // keyword/term
+        // utm_term=mens shoes
+        // utm_term=mens shoes blue
 
         break;
+        
+        case 'utm_creative_format':
+        // utm_creative_format=text
+        // utm_creative_format=video
+        
+        break:
         
     }
 }
